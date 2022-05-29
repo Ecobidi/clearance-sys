@@ -1,0 +1,150 @@
+
+body {
+  font-family: "Roboto", "lato", sans-serif;
+}
+.main {
+  width: 100%;
+  height: calc(100vh - 56px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.sidenav {
+  width: 237px;
+  background-color: #dddce1 !important;
+}
+.main-section {
+  flex: 1;
+  background-color: rgb(0 0 0 / 4%);
+}
+.nav {
+  margin-top: 1.45rem;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+}
+.nav-item {
+  border-radius: 0.437rem;
+  margin-bottom: .2rem;
+  width: 100%;
+  line-height: 1.8;
+}
+.nav-item:hover, .nav-item.active {
+  background-color: #e8e7ec !important;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.75rem 1.937rem 0.75rem 1rem;
+  color: #787878;
+}
+.nav-item.active .nav-link {
+  color: #007bff
+}
+.nav-link:hover {
+  color: #787878;
+}#branding {
+  width: 72px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px dotted white;
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.table-thumbnail {
+  width: 72px; 
+  height: 92px; 
+  border-radius: 12px;
+}
+
+.profile-photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.login-page-design {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 350px;
+  width: 250px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  z-index: 1;
+}
+
+
+.table row:nth-child((odd)) {
+  background-color: #c1c1c1;
+}
+
+img {
+  width: 100%;
+}
+
+.space {
+  padding: 2.5em 0 2.5em 0;
+}
+.profile-photo-thumbnail-wrapper img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+.dot {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.underline {
+  border-bottom: 2px solid #fff;
+}
+.big-link {
+  text-decoration: none !important;
+}
+.icon {
+  font-size: 3.8rem;
+}
+
+.user-img-circle-md {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.underline {
+  border-bottom: 2px solid #fff;
+}
+
+.table-stripped tbody tr:nth-of-type(odd) {
+  background-color:red !important;
+}
+
+.book-thumbnail {
+  width: 120px;
+  height: 180px;
+}
+
+.icon {
+  font-size: 65px;
+}
+
+.light-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid-item p {
+  margin-bottom: 0;
+}

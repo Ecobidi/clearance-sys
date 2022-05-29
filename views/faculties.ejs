@@ -1,0 +1,77 @@
+<%- include ('partials/top') %>
+  <div class="row space">
+    <div class="col-12 d-flex justify-content-between align-items-center underline pb-2">
+      <h3 class="title">Faculties/Schools</h3>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">Add New Faculty/School</button>
+    </div> 
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <form id="search-form" method="GET" action="/faculties?" class="form-inline">
+        <div class="form-group mb-4">
+          <input required type="text" name="search" id="search-box" class="form-control" placeholder="Search ...">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+      <h4 class="font-weight-light text-center text-white bg-primary p-2 m-0 table-top">List of Faculties/Schools</h4>
+      <table class="table table-bordered table-striped">
+        <thead class="font-weight-bold">
+          <tr>
+            <td>Name of Faculty</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% faculties.forEach((m) => { %>
+            <tr>
+              <td><%= m.faculty_name %></td>
+              <td>
+                <a href='<%= "/faculties/remove/" + m._id %>' class="btn btn-sm btn-danger mx-1 my-1">Remove</a>
+              </td>
+            </tr>
+          <% }) %>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+</div>
+
+</div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add New Faculty/School</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <form action="/faculties/new" method="POST">
+          
+          <fieldset class="border p-2 rounded row">
+            <legend>Faculty/School Details</legend>
+            <div class="form-group col-12">
+              <label>Name of Faculty/School: <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" name="faculty_name">
+            </div>
+          </fieldset>
+          <div class="form-group mt-4">
+            <button class="btn btn-success form-control" type="submit">Proceed</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<%- include ('partials/bottom') %>

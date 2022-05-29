@@ -1,0 +1,42 @@
+<%- include ('partials/top') %>
+<section class="main-section">
+  <div class="container-fluid">
+    <div class="row py-4">
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+        <a href="/departments" class="card bg-white text-dark d-flex p-2 align-items-center big-link">
+          <i class="fa fa-building icon" aria-hidden="true"></i>
+          <div class="d-inline-block text-center">
+            <h4 class="card-title display-4"><%= departments_count %></h4>
+            <p class="card-text">Departments</p>  
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+        <a href="/faculties" class="card bg-white text-dark d-flex p-2 align-items-center big-link">
+          <i class="fa fa-university icon" aria-hidden="true"></i>
+          <div class="d-inline-block text-center">
+            <h4 class="card-title display-4"><%= faculties_count %></h4>
+            <p class="card-text">Faculties</p>  
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+        <a href="/students" class="card bg-white text-dark d-flex p-2 align-items-center big-link">
+          <i class="fa fa-address-book icon" aria-hidden="true"></i>
+          <div class="d-inline-block text-center">
+            <h4 class="card-title display-4"><%= students_count %></h4>
+            <p class="card-text">Students</p>  
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+        <a href="/users" class="card bg-white text-dark d-flex p-2 align-items-center big-link">
+          <i class="fa fa-users icon" aria-hidden="true"></i>
+          <div class="d-inline-block text-center">
+            <h4 class="card-title display-4"><%= users_count %></h4>
+            <p class="card-text">Users</p>  
+          </div>
+        </a>
+      </div>
+    </div>
+<%- include('partials/bottom') %>

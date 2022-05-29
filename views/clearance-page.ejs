@@ -1,0 +1,61 @@
+<%- include ('partials/top') %>
+<div class="jumbotron text-center p-3">
+  <h1 class="display-4 text-primary">Student Clearance Page</h1>
+  <p  style="font-size: 2.2rem"><%= clearance.student.surname + " " + clearance.student.first_name + " " + clearance.student.middle_name %></p>
+  <hr class="my-2">
+  <p style="font-size: 2.2rem"><%= clearance.student.matric_no %></p>
+  <% /* %>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/clearances/clear" role="button">Proceed To Finally Clear Student</a>
+  </p>
+  <% */ %>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div>
+      <% if (error_msg && error_msg.length > 0) { %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong><%= error_msg %></strong> 
+        </div>
+        <script>
+          $(".alert").alert();
+        </script>
+      <% } %>
+    </div>
+    <div>
+      <% if (success_msg && success_msg.length > 0) { %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong><%= success_msg %></strong> 
+        </div>
+        <script>
+          $(".alert").alert();
+        </script>
+      <% } %>
+    </div>
+  </div>
+  <% stages.forEach(s => { %>
+    <div class="col-lg-3 col-md-4 col-sm-6 p-3 border">
+      <h3 class="lead text-primary"><%= s.level.toUpperCase() %></h3>
+      <% if (s.document_image && s.document_image.url) { %>
+      <img src='<%= s.document_image.url %>' alt="" style="height: 200px; width: 100%;" >
+      <a href='<%= s.document_image.url %>' target="_blank" class="btn btn-primary btn-block mb-2">View Document</a>
+      <% if (s.cleared || s.status=='cleared') { %>
+        <a href="#" class="btn btn-success btn-block btn-outlook-success disabled" >Document Cleared</a>
+      <% } else { %>
+        <a href='<%= "/clearances/approve/" + clearance._id + "?level=" + s.level %>' class="btn btn-success btn-block">Approve Document</a>
+
+      <% } %>
+      <% } else { %>
+        <h6 class="text-danger my-4">No Document Uploaded Yet</h6>
+      <% } %>
+    </div>
+  <% }) %>
+</div>
+
+<%- include ('partials/bottom') %>

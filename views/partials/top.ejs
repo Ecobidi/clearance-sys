@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/app.css" type="text/css" />
+  <title><%= appname %></title>
+</head>
+<body>
+  <nav class="navbar navbar-light">
+		<a class="navbar-brand" href="#"><%= appname %></a>
+  </nav>
+  
+	<main class="main">
+		<aside class="sidenav">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a href="/" class="nav-link"><i class="fa fa-dashboard mr-2" aria-hidden="true"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="/departments" class="nav-link"><i class="fa fa-building mr-2" aria-hidden="true"></i> Departments</a>
+        </li>
+        <li class="nav-item">
+          <a href="/faculties" class="nav-link"><i class="fa fa-university mr-2" aria-hidden="true"></i> Faculties</a>
+        </li>
+        <li class="nav-item">
+          <a href="/students" class="nav-link"><i class="fa fa-address-book-o mr-2" aria-hidden="true"></i> Students</a>
+        </li>
+        <li class="nav-item">
+          <a href="/clearances" class="nav-link"><i class="fa fa-archive mr-2" aria-hidden="true"></i> Clearances</a>
+        </li>
+        <li class="nav-item">
+          <a href="/users" class="nav-link"><i class="fa fa-users mr-2" aria-hidden="true"></i> Users</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link"><i class="fa fa-sign-out mr-2" aria-hidden="true"></i> Logout</a>
+        </li>
+      </ul>
+    </aside>
+    <section class="main-section">
+      <div class="container-fluid">
